@@ -17,6 +17,10 @@ public class Abonent {
         System.out.println(name + " received p(" + prime + ") g(" + primitiveRoot + ") and generated side key " + sideKey);
     }
 
+    public void setSideKey(BigInteger sideKey) {
+        this.sideKey = sideKey;
+    }
+
     public BigInteger sendOneSideFunction() {
         BigInteger result = primitiveRoot.modPow(sideKey, prime);
         System.out.println(name + " send result of function " + result);
